@@ -1,0 +1,55 @@
+#ejercicio 1: Calculadora básica: crea una función llamada "calculadora" que reciba dos números y una operación (suma, resta, multiplicación, división) como parámetros. La función debe realizar la operación correspondiente y devolver el resultado.
+
+def Interfaz_calculadora():
+    print("Calculadora básica.")
+    print("1. Suma")
+    print("2. Resta")
+    print("3. Multiplicación")
+    print("4. División")
+    print("5. Cerrar calculadora")
+
+def funciones(opcion, n1, n2):
+    if opcion == 1:
+        suma = n1 + n2
+        print(f"La suma de los números es: {suma}")
+    elif opcion == 2:
+        resta = n1 - n2
+        print(f"La resta de los números es: {resta}")
+    elif opcion == 3:
+        multiplicacion = n1 * n2
+        print(f"La multiplicación de los números es: {multiplicacion}")
+    elif opcion == 4:
+        if n2 != 0: 
+            division = n1 / n2
+            print(f"La división de los números es: {division}")
+        else:
+            print("Error: No se puede dividir entre cero.")
+    elif opcion == 5:
+        print("Cerrando la calculadora. ¡Hasta luego!")
+    else:
+        print("Opción no válida. Por favor, intente de nuevo.")
+
+Interfaz_calculadora() # Mostrar el menú de la calculadora
+
+# Programa principal
+while True:
+    opcion = int(input("Escoja una opción: "))
+    
+    if opcion == 5:  # Si el usuario elige cerrar, salimos del bucle
+        funciones(opcion, 0, 0)
+        break
+
+    n1 = float(input("Ingrese el primer número: "))
+    n2 = float(input("Ingrese el segundo número: "))
+
+    funciones(opcion, n1, n2)
+
+#ejercicio 2: escribe una función llamada "convertir_temperatura" que convierta una temperatura dada en grados Celsius a Fahrenheit.
+
+def convertir_temperatura(celcius):
+    Fahrenheit = celcius * 9/5 + 32
+    return Fahrenheit
+
+celcius = float(input("Ingrese la temperatura a convertir: "))
+fahrenheit = convertir_temperatura(celcius)
+print(f"La temperatura {celcius}°C en Farenheit es {fahrenheit}")
