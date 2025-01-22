@@ -15,3 +15,20 @@ print(f"Hola, {nombre}, tu edad es {Edad} y {estado}")
 radio = float(input("ingrese el radio del circulo a calcular en cm: "))
 area = 3.14 * radio ** 2
 print(f"El area del circulo es de {area} cm2")
+
+#Ejercicio 3: un programa que calcula el área de un triángulo a partir de la base y la altura proporcionadas por el usuario.
+base = float(input("ingrese la base del triangulo a calcular en cm: "))
+altura = float(input("ingrese la altura del triangulo a calcular en cm: "))
+area = base * altura / 2
+print(f"El area del triangulo es de {area} cm2")
+
+#Ejercicio 4: un programa que verifica si un número ingresado por el usuario es par o impar muestra un mensaje correspondiente.
+numero = int(input("ingrese un numero entero: "))
+def es_par(numero):
+    if numero % 2 > 0:
+        return "es un numero impar"
+    else:
+        return "es un numero par"
+
+mensaje = es_par(numero)
+print(f"El numero {numero} {mensaje} ")
