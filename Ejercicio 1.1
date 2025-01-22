@@ -1,0 +1,12 @@
+#Ejercicio 1: un programa que solicita al usuario su nombre y edad, y luego muestra un mensaje de bienvenida, junto con la edad y especificando si esmenor de edad o adult
+nombre = input("ingresa tu nombre: ")
+Edad = int(input("ingresa tu edad: "))
+def mensaje(Edad):
+    if Edad < 18:
+        return"eres menor de edad"
+    else:
+        return"eres mayor de edad"
+
+estado = mensaje(Edad)
+
+print(f"Hola, {nombre}, tu edad es {Edad} y {estado}")
