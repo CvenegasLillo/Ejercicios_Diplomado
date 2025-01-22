@@ -1,1 +1,57 @@
+#Ejercicio 1: un programa que verifica si un número ingresado por el usuario es par o impar muestra un mensaje correspondiente.
+numero = int(input("ingrese un numero entero: "))
+#misma funcion ocupada en ejercicio 4 de clase 1 pero en este caso en vez de evaluar numero % 2 > 0 en caso de ser impar, se ocupa numero % 2 == 0 en caso de ser par.
+def es_par(numero):
+    if numero % 2 == 0:
+        return "es un numero par"
+    else:
+        return "es un numero impar"
 
+mensaje = es_par(numero)
+print(f"El numero {numero} {mensaje} ")
+
+#Ejercicio 2: Escribe un programa que solicite al usuario ingresar un número y muestre en pantalla una cuenta regresiva desde ese número, hasta 0, utilizando un bucle while.
+cuenta_regresiva = int(input("Por favor ingrese un numero entero: "))
+while cuenta_regresiva >= 0:
+    print(cuenta_regresiva)
+    cuenta_regresiva -= 1
+
+#Ejercicio 3: Escribe un programa que solicite al usuario ingresar una serie de números y calcule la suma acumulativa de esos números. Utiliza un bucle for para iterar sobre los números ingresados.
+cantidad = int(input("ingrese cuantos numero quiere sumar: "))
+suma = 0
+
+for i in range(cantidad):
+    numero = int(input("ingrese el numero quiere sumar: "))
+    suma += numero
+
+print(f"La suma acumulativo de estos numeros es {suma}")
+
+Ejercicio 4: Escribe un programa que solicite al usuario ingresar una serie de números y determine cuál es el número máximo y mínimo de los ingresados, utilizando estructuras condicionales.
+cantidad = int(input("Ingrese cuántos números quiere ingresar: "))
+lista = []
+for i in range(cantidad):
+    numero = int(input("Ingrese un número: "))
+    lista.append(numero)
+
+minimo = lista[0]
+maximo = lista[0]
+
+for numero in lista:
+    if numero > maximo:
+        maximo = numero
+    if numero < minimo:
+        minimo = numero
+
+print(f"El número menor ingresado es {minimo} y el número mayor es {maximo}")
+
+#ejercicio 5: Escribe un programa que solicite al usuario ingresar un número y calcule su factorial, utilizando un bucle for.Asegúrate de manejar el caso especial del factorial de 0.
+numero = int(input("ingrese un numero para calcular su factoria: "))
+factorial = 1
+
+if numero == 0:
+    print("el factorial de 0 es 1")
+else:
+    for i in range(1, numero+1): #recordar que en el rango no toma el ultimo valor, por eso el mas 1.
+        factorial *= i
+
+print(f"El factorial de {numero} es {factorial}")
